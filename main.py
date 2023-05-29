@@ -22,6 +22,7 @@ qr = qr.make_image(fill_color="black", back_color="white")
 qr = np.array(qr)
 
 
+# todo: optimise?
 # if height of qr code is odd, add one row of zeros
 if (qr.shape[0]%2 == 1):
     temp = np.zeros((qr.shape[0]+1, qr.shape[1]), dtype=bool)
@@ -47,4 +48,3 @@ for i in range(0, qr.shape[0], 2):
             print(" ", end="")
 
     print("\n", end="")
-
