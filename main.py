@@ -22,12 +22,9 @@ qr = qr.make_image(fill_color="black", back_color="white")
 qr = np.array(qr)
 
 
-# todo: optimise?
-# if height of qr code is odd, add one row of zeros
+# if height of qr code is odd, append one row of zeros
 if (qr.shape[0]%2 == 1):
-    temp = np.zeros((qr.shape[0]+1, qr.shape[1]), dtype=bool)
-    temp[:qr.shape[0], :] = qr
-    qr = temp
+    qr = np.vstack((qr, np.zeros((1, qr.shape[1]), dtype=bool)))
 
 
 # print the qr code using block unicode chars ('▄','█','▀',' ')
