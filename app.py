@@ -25,6 +25,7 @@ def return_qr(text = DEFAULT_TEXT):
 
 
     # if height of qr code is odd, append one row of zeros
+    # since each block character is 2x1 (height x width)
     if (qr.shape[0]%2 == 1):
         qr = np.vstack((qr, np.zeros((1, qr.shape[1]), dtype=bool)))
 
