@@ -8,7 +8,7 @@ $ curl http://[server address]/[text or url]
 ```
 ```
 > (Invoke-WebRequest http://[server address]/[text or url]).Content
-(or)
+ or
 > (iwr http://[server address]/[text or url]).Content
 ```
 ### Examples:
